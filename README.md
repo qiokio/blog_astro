@@ -1,45 +1,45 @@
-# 🌟 Litos Theme
+# 🌟 Litos 主题
 
-![Litos Cover](./src/assets/cover@2x.png)
+![Litos 封面](./src/assets/cover@2x.png)
 
-A modern, elegant Astro theme crafted for content creators and developers.
+一个为内容创作者和开发者精心打造的现代、优雅的Astro主题。
 
-## ✨ Key Features
+## ✨ 核心特性
 
-### 📱 Responsive Design
+### 📱 响应式设计
 
-- Fluid layouts that adapt seamlessly across devices
-- Optimized reading experience on all screen sizes
+- 流畅的布局，可以无缝适应各种设备
+- 在所有屏幕尺寸上优化的阅读体验
 
-### 🎨 Content Presentation
+### 🎨 内容展示
 
-- Multiple post layouts (16:9, 3:4, no-image)
-- Dynamic image handling with zoom capability
-- Clean typography with customizable styles
+- 多种文章布局（16:9、3:4、无图片）
+- 动态图片处理，具有缩放功能
+- 清晰的排版，可自定义样式
 
-### ⚡ Performance
+### ⚡ 性能表现
 
-- Fast page loads with optimized assets
-- Built-in image optimization
-- Minimal JavaScript usage
+- 优化资源，实现快速页面加载
+- 内置图片优化
+- 最小化JavaScript使用
 
-### 🛠️ Developer Experience
+### 🛠️ 开发者体验
 
-- VS Code snippets for quick content creation
-- Structured content organization
-- Type-safe content collections
+- VS Code代码片段，快速创建内容
+- 结构化的内容组织
+- 类型安全的内容集合
 
-### 📦 Built-in Features
+### 📦 内置功能
 
-- 🏷️ Tag-based navigation
-- 📊 Reading time estimation
-- 🔍 SEO optimization
-- 🌓 Dark/Light mode
-- 📱 Social media previews
+- 🏷️ 基于标签的导航
+- 📊 阅读时间估计
+- 🔍 SEO优化
+- 🌓 深色/浅色模式
+- 📱 社交媒体预览
 
-### 🎯 Content Focus
+### 🎯 内容焦点
 
-- Distraction-free reading experience
-- Multiple content layouts
-- Code syntax highlighting
-- Responsive image galleries
+- 无干扰的阅读体验
+- 多种内容布局
+- 代码语法高亮
+- 响应式图片画廊

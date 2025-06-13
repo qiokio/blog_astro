@@ -39,7 +39,7 @@ const { title, description, introduce } = PROJECTS_CONFIG
                     <div class="flex items-center py-1.5 gap-3">
                       {project.star && (
                         <>
-                          <span class="text-xs uppercase tracking-wide font-medium text-muted-foreground">Stars</span>
+                          <span class="text-xs uppercase tracking-wide font-medium text-muted-foreground">星标</span>
                           <span class="font-mono font-semibold text-lg">
                             <NumberTicker play value={project.star} client:load />
                           </span>
@@ -49,7 +49,7 @@ const { title, description, introduce } = PROJECTS_CONFIG
                     <div class="flex items-center py-1.5 gap-3">
                       {project.fork && (
                         <>
-                          <span class="text-xs uppercase tracking-wide font-medium text-muted-foreground">Forks</span>
+                          <span class="text-xs uppercase tracking-wide font-medium text-muted-foreground">分叉</span>
                           <span class="font-mono font-semibold text-lg">
                             <NumberTicker play value={project.fork} client:load />
                           </span>
@@ -65,7 +65,7 @@ const { title, description, introduce } = PROJECTS_CONFIG
                         class="hover:text-zinc-600 dark:hover:text-zinc-100 flex items-center gap-1"
                       >
                         <span class="icon-[mdi--web] size-5" />
-                        <span>Website</span>
+                        <span>网站</span>
                       </a>
                     )}
                     {project.githubUrl && (

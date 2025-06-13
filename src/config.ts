@@ -2,7 +2,7 @@ import type { GithubConfig, Link, PostConfig, Project, ProjectConfig, Site, Skil
 
 export const SITE: Site = {
   title: 'Litos',
-  description: 'Litos is a blog theme built with Astro.js and Dnzzk2.',
+  description: 'Litos是一个使用Astro.js和Dnzzk2构建的博客主题。',
   website: 'https://litos.vercel.app/',
   base: '/',
   author: 'Dnzzk2',
@@ -11,35 +11,35 @@ export const SITE: Site = {
 
 export const HEADER_LINKS: Link[] = [
   {
-    name: 'Posts',
+    name: '文章',
     url: '/posts',
   },
   {
-    name: 'Projects',
+    name: '项目',
     url: '/projects',
   },
 ]
 
 export const FOOTER_LINKS: Link[] = [
   {
-    name: 'Readme',
+    name: '首页',
     url: '/',
   },
   {
-    name: 'Posts',
+    name: '文章',
     url: '/posts',
   },
   {
-    name: 'Projects',
+    name: '项目',
     url: '/projects',
   },
   {
-    name: 'Tags',
+    name: '标签',
     url: '/tags',
   },
 ]
 
-// get icon https://icon-sets.iconify.design/
+// 获取图标 https://icon-sets.iconify.design/
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: 'github',
@@ -160,9 +160,9 @@ export const GITHUB_CONFIG: GithubConfig = {
 }
 
 export const POSTS_CONFIG: PostConfig = {
-  title: 'Posts',
-  description: 'Posts by Dnzzk2',
-  introduce: 'Here, I will share the usage instructions for this theme to help you quickly use it.',
+  title: '文章',
+  description: 'Dnzzk2的文章',
+  introduce: '在这里，我将分享这个主题的使用说明，帮助您快速使用它。',
   author: 'Dnzzk2',
   homePageConfig: {
     size: 5,
@@ -179,32 +179,32 @@ export const POSTS_CONFIG: PostConfig = {
   defaultHeroImage: '/og-image.jpg',
   defaultHeroImageAspectRatio: '16/9',
   imageDarkenInDark: true,
-  readMoreText: 'Read more',
-  prevPageText: 'Previous',
-  nextPageText: 'Next',
-  tocText: 'Catalogue',
-  backToPostsText: 'Back to Posts',
-  nextPostText: 'Next Post',
-  prevPostText: 'Previous Post',
+  readMoreText: '阅读更多',
+  prevPageText: '上一页',
+  nextPageText: '下一页',
+  tocText: '目录',
+  backToPostsText: '返回文章列表',
+  nextPostText: '下一篇',
+  prevPostText: '上一篇',
 }
 
 export const TAGS_CONFIG: TagsConfig = {
-  title: 'Tags',
-  description: 'All tags of Posts',
-  introduce: 'All the tags for posts are here, you can click to filter them.',
+  title: '标签',
+  description: '所有文章标签',
+  introduce: '这里是所有文章的标签，您可以点击进行筛选。',
 }
 
 export const PROJECTS_CONFIG: ProjectConfig = {
-  title: 'Projects',
-  description: 'The examples of my projects.',
-  introduce: 'The examples of my projects.',
+  title: '项目',
+  description: '我的项目示例。',
+  introduce: '我的项目示例。',
 }
 
-// get icon https://icon-sets.iconify.design/
+// 获取图标 https://icon-sets.iconify.design/
 export const ProjectList: Project[] = [
   {
     name: 'Litos',
-    description: 'A Simple & Modern Blog Theme for Astro.',
+    description: '一个简约现代的Astro博客主题。',
     githubUrl: 'https://github.com/Dnzzk2/Litos',
     website: 'https://litos.vercel.app/',
     type: 'image',

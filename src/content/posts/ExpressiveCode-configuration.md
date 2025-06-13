@@ -1,18 +1,18 @@
 ---
-title: 'ExpressiveCode Configuration Guide'
-description: 'A comprehensive guide to configuring and customizing code blocks in Litos theme'
+title: 'ExpressiveCode配置指南'
+description: 'Litos主题中配置和自定义代码块的综合指南'
 pubDate: 2025-05-02
-tags: ['Configuration', 'Code Blocks', 'Styling']
+tags: ['配置', '代码块', '样式']
 heroImage: 'ExpressiveCode-Configuration.webp'
 ogImage: 'ExpressiveCode-Configuration.webp'
 recommend: true
 ---
 
-In Markdown documents, we use code blocks to display code snippets and other content. This document explains how to customize the code block configuration.
+在Markdown文档中，我们使用代码块来显示代码片段和其他内容。本文档解释了如何自定义代码块配置。
 
-The code blocks in this theme are configured using [Expressive Code](https://expressive-code.com/), with all configuration options defined in the `ec.config.mjs` file. Below is a detailed explanation of the main configuration options:
+本主题中的代码块使用[Expressive Code](https://expressive-code.com/)配置，所有配置选项都定义在`ec.config.mjs`文件中。以下是主要配置选项的详细解释：
 
-## Basic Configuration
+## 基本配置
 
 ```ts title="ec.config.mjs"
 export default defineEcConfig({
@@ -27,9 +27,9 @@ export default defineEcConfig({
 })
 ```
 
-## Style Configuration
+## 样式配置
 
-Customize code block styles using `styleOverrides`:
+使用`styleOverrides`自定义代码块样式：
 
 ```ts title="ec.config.mjs"
 styleOverrides: {
@@ -61,13 +61,13 @@ styleOverrides: {
 }
 ```
 
-## Plugin Configuration
+## 插件配置
 
-The theme includes two built-in plugins:
+主题包含两个内置插件：
 
-1. `pluginCollapsibleSections`: Adds collapsible code sections
-   - `defaultCollapsed`: Controls initial collapse state
-   - `collapseButton`: Customizes collapse button appearance
+1. `pluginCollapsibleSections`：添加可折叠代码段
+   - `defaultCollapsed`：控制初始折叠状态
+   - `collapseButton`：自定义折叠按钮外观
    ```ts
    pluginCollapsibleSections({
      defaultCollapsed: false,     // Initial collapse state / 初始折叠状态
@@ -78,8 +78,8 @@ The theme includes two built-in plugins:
    })
    ```
 
-2. `pluginLineNumbers`: Adds line numbers to code blocks
-   - Supports custom styling and formatting
+2. `pluginLineNumbers`：向代码块添加行号
+   - 支持自定义样式和格式
    ```ts
    pluginLineNumbers({
      className: 'custom-line-numbers',  // Custom CSS class / 自定义 CSS 类名
@@ -88,9 +88,9 @@ The theme includes two built-in plugins:
    })
    ```
 
-## Theme Configuration
+## 主题配置
 
-The theme uses the Catppuccin color scheme with extensive customization options:
+主题使用Catppuccin颜色方案，具有广泛的自定义选项：
 
 ```ts title="ec.config.mjs"
 themes: ['catppuccin-macchiato', 'catppuccin-latte'],  // Dark and light themes / 暗色和亮色主题
@@ -116,4 +116,4 @@ themeCustomizations: {
 }
 ```
 
-If you need to learn more about configuration, you can refer to the official website documentation: [Expressive Code Configuration](https://expressive-code.com/reference/configuration/).
+如果你需要了解更多关于配置的信息，可以参考官方网站文档：[Expressive Code配置](https://expressive-code.com/reference/configuration/)。

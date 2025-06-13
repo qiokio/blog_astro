@@ -1,81 +1,81 @@
 ---
-title: 'Markdown Extension Syntax'
-description: 'A comprehensive guide to enhanced Markdown features in Litos theme'
+title: 'Markdown扩展语法'
+description: 'Litos主题中增强Markdown功能的综合指南'
 pubDate: 2025-04-29
 author: 'Dnzzk2'
 recommend: true
 heroImage: 'markdown-extension-syntax.webp'
 ogImage: 'markdown-extension-syntax.webp'
 heroImageAspectRatio: '16/9'
-tags: ['Markdown', 'Guide']
+tags: ['Markdown', '指南']
 ---
 
-This guide has made slight changes based on the [markdown-mdx-extended-features](https://astro-antfustyle-theme.vercel.app/blog/markdown-mdx-extended-features/). **Thank you** to the original author :link[Stephanie Lin]{#@lin-stephanie} for efforts.
+本指南基于[markdown-mdx-extended-features](https://astro-antfustyle-theme.vercel.app/blog/markdown-mdx-extended-features/)进行了轻微修改。**感谢**原作者:link[Stephanie Lin]{#@lin-stephanie}的贡献。
 
-## Callouts
+## 提示框
 
-Supported by the :link[rehype-callouts]{id=lin-stephanie/rehype-callouts class='github'} , you can configure the plugin in `plugins/index.ts`.
+由:link[rehype-callouts]{id=lin-stephanie/rehype-callouts class='github'}支持，您可以在`plugins/index.ts`中配置该插件。
 
-If you change the `theme` configuration (default: `'vitepress'`), you will also need to update the imported CSS file in `src/styles/pro.css` (`@import 'rehype-callouts/theme/yourconfig'`).
+如果您更改了`theme`配置（默认值：`'vitepress'`），您还需要更新在`src/styles/pro.css`中导入的CSS文件（`@import 'rehype-callouts/theme/yourconfig'`）。
 
 ```md
-<!-- Callout type names are case-insensitive: 'Note', 'NOTE', and 'note' are equivalent. -->
+<!-- 提示框类型名称不区分大小写：'Note'、'NOTE'和'note'是等效的。 -->
 
 <!-- vitepress -->
 
-<!-- This is a _non-collapsible_ callout -->
+<!-- 这是一个_不可折叠的_提示框 -->
 > [!note]
-> Note content.
+> 提示内容。
 
 > [!tip]
-> Tip content.
+> 技巧内容。
 
 > [!important]
-> Important content.
+> 重要内容。
 
 > [!warning]
-> Warning content.
+> 警告内容。
 
 > [!caution]
-> Caution content.
+> 注意内容。
 
-> [!caution]- This is a **collapsible** callout
-> Caution content.
+> [!caution]- 这是一个**可折叠的**提示框
+> 注意内容。
 
-> [!note]+ This is a **collapsible** callout
-> Note content.
+> [!note]+ 这是一个**可折叠的**提示框
+> 提示内容。
 ```
 
 > [!note]
-> Note content.
+> 提示内容。
 
 > [!tip]
-> Tip content.
+> 技巧内容。
 
 > [!important]
-> Important content.
+> 重要内容。
 
 > [!warning]
-> Warning content.
+> 警告内容。
 
 > [!caution]
-> Caution content.
+> 注意内容。
 
-> [!caution]- This is a **collapsible** callout
-> Caution content.
+> [!caution]- 这是一个**可折叠的**提示框
+> 注意内容。
 
-> [!note]+ This is a **collapsible** callout
-> Note content.
+> [!note]+ 这是一个**可折叠的**提示框
+> 提示内容。
 
-## Fully-featured Code Blocks
+## 功能丰富的代码块
 
-Supported by :link[astro-expressive-code]{id=https://github.com/expressive-code/expressive-code/tree/main/packages/astro-expressive-code} with [@expressive-code/plugin-collapsible-sections](https://expressive-code.com/plugins/collapsible-sections/) and [@expressive-code/plugin-line-numbers](https://expressive-code.com/plugins/line-numbers/) plugins to add styling and extra functionality for code blocks.
+由:link[astro-expressive-code]{id=https://github.com/expressive-code/expressive-code/tree/main/packages/astro-expressive-code}支持，配合[@expressive-code/plugin-collapsible-sections](https://expressive-code.com/plugins/collapsible-sections/)和[@expressive-code/plugin-line-numbers](https://expressive-code.com/plugins/line-numbers/)插件为代码块添加样式和额外功能。
 
-To customize code block themes or functionality, modify the `ec.config.mjs` file at the project root after reviewing the :link[Configuring Expressive Code]{id=https://expressive-code.com/reference/configuration/}, such as [change themes](https://expressive-code.com/guides/themes/#using-bundled-themes), [enable word wrap](https://expressive-code.com/key-features/word-wrap/#wrap), or [toggle line numbers](https://expressive-code.com/plugins/line-numbers/#showlinenumbers).
+要自定义代码块主题或功能，请在查看:link[配置Expressive Code]{id=https://expressive-code.com/reference/configuration/}后修改项目根目录中的`ec.config.mjs`文件，例如[更改主题](https://expressive-code.com/guides/themes/#using-bundled-themes)、[启用自动换行](https://expressive-code.com/key-features/word-wrap/#wrap)或[切换行号](https://expressive-code.com/plugins/line-numbers/#showlinenumbers)。
 
-Here’s a quick preview of what’s possible. Check the [detailed guide](https://expressive-code.com/key-features/syntax-highlighting/) for more info.
+这里有一个简单预览，展示了可能的功能。查看[详细指南](https://expressive-code.com/key-features/syntax-highlighting/)获取更多信息。
 
-#### Syntax highlighting
+#### 语法高亮
 
 ```js title='example.md'
 console.log('This code is syntax highlighted!')
@@ -83,22 +83,22 @@ console.log('This code is syntax highlighted!')
 
 ```ansi title='ansi-example.md'
 ANSI colors:
-- Regular: [31mRed[0m [32mGreen[0m [33mYellow[0m [34mBlue[0m [35mMagenta[0m [36mCyan[0m
-- Bold:    [1;31mRed[0m [1;32mGreen[0m [1;33mYellow[0m [1;34mBlue[0m [1;35mMagenta[0m [1;36mCyan[0m
-- Dimmed:  [2;31mRed[0m [2;32mGreen[0m [2;33mYellow[0m [2;34mBlue[0m [2;35mMagenta[0m [2;36mCyan[0m
+- Regular: [31mRed[0m [32mGreen[0m [33mYellow[0m [34mBlue[0m [35mMagenta[0m [36mCyan[0m
+- Bold:    [1;31mRed[0m [1;32mGreen[0m [1;33mYellow[0m [1;34mBlue[0m [1;35mMagenta[0m [1;36mCyan[0m
+- Dimmed:  [2;31mRed[0m [2;32mGreen[0m [2;33mYellow[0m [2;34mBlue[0m [2;35mMagenta[0m [2;36mCyan[0m
 
 256 colors (showing colors 160-177):
-[38;5;160m160 [38;5;161m161 [38;5;162m162 [38;5;163m163 [38;5;164m164 [38;5;165m165[0m
-[38;5;166m166 [38;5;167m167 [38;5;168m168 [38;5;169m169 [38;5;170m170 [38;5;171m171[0m
-[38;5;172m172 [38;5;173m173 [38;5;174m174 [38;5;175m175 [38;5;176m176 [38;5;177m177[0m
+[38;5;160m160 [38;5;161m161 [38;5;162m162 [38;5;163m163 [38;5;164m164 [38;5;165m165[0m
+[38;5;166m166 [38;5;167m167 [38;5;168m168 [38;5;169m169 [38;5;170m170 [38;5;171m171[0m
+[38;5;172m172 [38;5;173m173 [38;5;174m174 [38;5;175m175 [38;5;176m176 [38;5;177m177[0m
 
 Full RGB colors:
-[38;2;34;139;34mForestGreen - RGB(34, 139, 34)[0m
+[38;2;34;139;34mForestGreen - RGB(34, 139, 34)[0m
 
-Text formatting: [1mBold[0m [2mDimmed[0m [3mItalic[0m [4mUnderline[0m
+Text formatting: [1mBold[0m [2mDimmed[0m [3mItalic[0m [4mUnderline[0m
 ```
 
-##### Code editor frames
+##### 代码编辑器框架
 
 ```js title="my-test-file.js"
 // Use `title="my-test-file.js"`
@@ -111,7 +111,7 @@ console.log('Title attribute example')
 console.log('File name comment example')
 ```
 
-##### Terminal frames
+##### 终端框架
 
 ```bash
 echo "This terminal frame has no title"
@@ -121,7 +121,7 @@ echo "This terminal frame has no title"
 Write-Output "This one has a title!"
 ```
 
-##### Marking full lines & line ranges
+##### 标记整行和行范围
 
 ```js {1, 4, 7-8}
 // Line 1 - targeted by line number
@@ -134,7 +134,7 @@ Write-Output "This one has a title!"
 // Line 8 - targeted by range "7-8"
 ```
 
-##### Selecting line marker types (mark, ins, del)
+##### 选择行标记类型（mark, ins, del）
 
 ```js title="line-markers.js" del={2} ins={3-4} {6}
 function demo() {
@@ -146,7 +146,7 @@ function demo() {
 }
 ```
 
-##### Adding labels to line markers
+##### 为行标记添加标签
 
 ```jsx {"1":5} del={"2":7-8} ins={"3":10-12}
 // labeled-line-markers.jsx
@@ -164,7 +164,7 @@ function demo() {
 </button>
 ```
 
-##### Adding long labels on their own lines
+##### 在单独的行上添加长标签
 
 ```jsx {"1. Provide the value prop here:":5-6} del={"2. Remove the disabled and active states:":8-10} ins={"3. Add this to render the children inside the button:":12-15}
 // labeled-line-markers.jsx
@@ -185,7 +185,7 @@ function demo() {
 </button>
 ```
 
-##### Using diff-like syntax
+##### 使用类diff语法
 
 ```diff
 +this line will be marked as inserted
@@ -198,11 +198,9 @@ this is a regular line
     // This entire block gets highlighted as JavaScript,
     // and we can still add diff markers to it!
 -   console.log('Old code to be removed')
-+   console.log('New and shiny code!')
-  }
 ```
 
-##### Marking individual text inside lines
+##### 标记行内文本
 
 ```js "given text"
 // Plaintext search strings
@@ -212,7 +210,7 @@ function demo() {
 }
 ```
 
-##### Marking individual text inside lines
+##### 使用正则表达式标记行内文本
 
 ```ts /ye[sp]/
 // Regular expressions
@@ -248,7 +246,7 @@ function demo() {
 }
 ```
 
-##### Configuring word wrap per block
+##### 配置每个代码块的换行
 
 ```js wrap
 // Example with wrap
@@ -264,7 +262,7 @@ function getLongString() {
 }
 ```
 
-##### Configuring indentation of wrapped lines
+##### 配置换行行的缩进
 
 ```js wrap preserveIndent
 // Example with preserveIndent (enabled by default)
@@ -280,7 +278,7 @@ function getLongString() {
 }
 ```
 
-##### Collapsible sections
+##### 可折叠部分
 
 ```js collapse={1-5, 12-14, 21-24}
 // All this boilerplate setup code will be collapsed
@@ -309,7 +307,7 @@ engine.freeMemory()
 engine.shutdown({ reason: 'End of example boilerplate code' })
 ```
 
-##### Displaying line numbers per block
+##### 显示每个块的行号
 
 ```js showLineNumbers
 // This code block will show line numbers
@@ -329,70 +327,70 @@ console.log('Greetings from line 5!')
 console.log('I am on line 6')
 ```
 
-## Image Caption & Link
+## 图片标题与链接
 
-Use the [`:::image`](https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#image-) directive from :link[remark-directive-sugar]{#lin-stephanie/remark-directive-sugar .github} to wrap images in a container for captions, clickable links, and more. Customize via the `image` option in `plugins/index.ts` (`remarkDirectiveSugar`) and style under `/* :::image */` in `src/styles/pro.css`.
+使用[`:::image`](https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#image-)指令，来自:link[remark-directive-sugar]{#lin-stephanie/remark-directive-sugar .github}，将图片包装在一个容器中，用于添加标题、可点击链接等功能。通过`plugins/index.ts`中的`image`选项（`remarkDirectiveSugar`）进行自定义，并在`src/styles/pro.css`中的`/* :::image */`下设置样式。
 
 ### `:::image-figure`
 
-`:::image-figure[caption]{<figcaption> attrs}`: The square brackets define the `<figcaption>` text (defaults to the alt text from `![]()` if omitted), while the curly braces are used for inline styles or supported attributes to the generated `<figcaption>` element.
+`:::image-figure[caption]{<figcaption> attrs}`：方括号定义`<figcaption>`文本（如果省略，则默认使用`![]()`) 中的alt文本)，而花括号用于内联样式或支持的属性，应用于生成的`<figcaption>`元素。
 
-`![alt](image path)(<img> attrs)`: Standard Markdown image with optional attributes in parentheses, enabled by :link[remark-imgattr]{#OliverSpeir/remark-imgattr .github}, for customizing the generated `<img>` element.
+`![alt](image path)(<img> attrs)`：标准Markdown图片，带有可选的括号中的属性，由:link[remark-imgattr]{#OliverSpeir/remark-imgattr .github}支持，用于自定义生成的`<img>`元素。
 
-`:::image-figure[caption]{<figcaption> attrs}`: The square brackets define the `<figcaption>` text (defaults to the alt text from `![]()` if omitted), while the curly braces are used for inline styles or supported attributes to the generated `<figcaption>` element.
+`:::image-figure[caption]{<figcaption> attrs}`：方括号定义`<figcaption>`文本（如果省略，则默认使用`![]()`) 中的alt文本)，而花括号用于内联样式或支持的属性，应用于生成的`<figcaption>`元素。
 
-`![alt](image path)(<img> attrs)`: Standard Markdown image with optional attributes in parentheses, enabled by :link[remark-imgattr]{#OliverSpeir/remark-imgattr .github}, for customizing the generated `<img>` element.
+`![alt](image path)(<img> attrs)`：标准Markdown图片，带有可选的括号中的属性，由:link[remark-imgattr]{#OliverSpeir/remark-imgattr .github}支持，用于自定义生成的`<img>`元素。
 
 ```md title=':::image-figure.md'
-:::image-figure[This Is a **Figcaption** with _`<figure>` Attrs_]{style="text-align:center;color:orange"}
+:::image-figure[这是一个带有 _`<figure>` 属性_的**图片标题**]{style="text-align:center;color:orange"}
 ![](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
 
-:::image-figure[This is a **figcaption** with _`<img>` attrs_.]
+:::image-figure[这是一个带有 _`<img>` 属性_的**图片标题**。]
 ![](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)(style: width:600px;)
 :::
 
-<!-- 💡 Use `(class:no-zoom)` to disable zoom -->
-:::image-figure[This is a **figcaption** with `class:no-zoom`.]
+<!-- 💡 使用 `(class:no-zoom)` 禁用缩放 -->
+:::image-figure[这是一个带有 `class:no-zoom` 的**图片标题**。]
 ![](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)(class:no-zoom)
 :::
 
-<!-- 💡 If no `[caption]`, use `[alt]` as figcaption. -->
+<!-- 💡 如果没有 `[caption]`，则使用 `[alt]` 作为图片标题。 -->
 :::image-figure
-![If `[caption]` not set, the alt text from `![]()` will be used as the figcaption.](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
+![如果未设置 `[caption]`，将使用 `![]()` 中的alt文本作为图片标题。](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
 
-<!-- 💡 Images for light (img-light) and dark (img-dark) modes -->
-<!-- ⚠️ At least one line must separate two image syntaxes (![]()), or won't work. -->
-:::image-figure[This example shows different images for light (add `class:img-light`) and dark (add `class:img-dark`) modes.]
+<!-- 💡 浅色模式（img-light）和深色模式（img-dark）的图片 -->
+<!-- ⚠️ 两个图片语法（![]()] 之间必须至少有一行分隔，否则无法工作。 -->
+:::image-figure[此示例显示了浅色模式（添加 `class:img-light`）和深色模式（添加 `class:img-dark`）的不同图片。]
 ![](~/assets/images/markdown-extension-syntax/image-16-9-light.png)(class:img-light)
 
 ![](~/assets/images/markdown-extension-syntax/image-16-9-light.png)(class:img-dark)
 :::
 
-<!-- ❌ If no text is available for the figcaption, it won't work.  -->
+<!-- ❌ 如果图片标题没有可用文本，则无法工作。 -->
 :::image-figure
 ![](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
 ```
 
-:::image-figure[This Is a **Figcaption** with _`<figure>` Attrs_]{style="text-align:center;color:orange"}
+:::image-figure[这是一个带有 _`<figure>` 属性_的**图片标题**]{style="text-align:center;color:orange"}
 ![](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
 
-:::image-figure[This is a **figcaption** with _`<img>` attrs_.]
+:::image-figure[这是一个带有 _`<img>` 属性_的**图片标题**。]
 ![](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)(style: width:600px;)
 :::
 
-:::image-figure[This is a **figcaption** with `class:no-zoom`.]
+:::image-figure[这是一个带有 `class:no-zoom` 的**图片标题**。]
 ![](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)(class:no-zoom)
 :::
 
 :::image-figure
-![If `[caption]` not set, the alt text from `![]()` will be used as the figcaption.](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
+![如果未设置 `[caption]`，将使用 `![]()` 中的alt文本作为图片标题。](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
 
-:::image-figure[This example shows different images for light (add `class:img-light`) and dark (add `class:img-dark`) modes.]
+:::image-figure[此示例显示了浅色模式（添加 `class:img-light`）和深色模式（添加 `class:img-dark`）的不同图片。]
 ![](~/assets/images/markdown-extension-syntax/image-16-9-dark.png)(class:img-light)
 
 ![](~/assets/images/markdown-extension-syntax/image-16-9-light.png)(class:img-dark)
@@ -400,15 +398,15 @@ Use the [`:::image`](https://github.com/lin-stephanie/remark-directive-sugar?tab
 
 > [!warning]
 >
-> Setting an image's `width` attribute directly may cause blurriness. [Learn more](https://github.com/Dnzzk2/Litos/discussions/17)
+> 直接设置图片的`width`属性可能会导致图片模糊。[了解更多](https://github.com/Dnzzk2/Litos/discussions/17)
 
 ### `:::image-a`
 
-The custom directive wraps an image inside a link, making it clickable.
+这个自定义指令将图片包装在链接中，使其可点击。
 
-`:::image-a{<a> attrs}`: Define the link (href), styles, or classes in the curly braces for `<a>` element.
+`:::image-a{<a> attrs}`：在花括号中为`<a>`元素定义链接（href）、样式或类。
 
-`![alt](image path)(<img> attrs)`: Same as above.
+`![alt](图片路径)(<img> attrs)`：与上面相同。
 
 ```md title=':::image-a.md'
 :::image-a{href="https://github.com/Dnzzk2/Litos"}
@@ -420,12 +418,12 @@ The custom directive wraps an image inside a link, making it clickable.
 :::
 
 ::::image-a{href="https://github.com/Dnzzk2/Litos"}
-:::image-figure[This example shows `:::image-a` wraps around `:::image-figure` (both are interchangeable).]
+:::image-figure[此示例展示了`:::image-a`如何包围`:::image-figure`（两者可互换）。]
 ![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
 ::::
 
-<!-- ❌ No external links provided, it won't work.-->
+<!-- ❌ 未提供外部链接，将无法工作。-->
 :::image-a
 ![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
@@ -440,20 +438,20 @@ The custom directive wraps an image inside a link, making it clickable.
 :::
 
 ::::image-a{href="https://github.com/Dnzzk2/Litos"}
-:::image-figure[This example shows `:::image-a` wraps around `:::image-figure` (both are interchangeable).]
+:::image-figure[此示例展示了`:::image-a`如何包围`:::image-figure`（两者可互换）。]
 ![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)(style:padding-top:1rem;)
 :::
 ::::
 
 ### :::image-figure-polaroid
 
-Polaroid style images with a border and shadow.
+宝丽来风格的图片，带有边框和阴影。
 
-In order to ensure the style size on the phone, I have set a minimum width of 300px, and you can modify and expand the style in `src/styles/picture.css`.
+为了确保在手机上的样式大小，我设置了最小宽度为300px，您可以在`src/styles/picture.css`中修改和扩展样式。
 
 ```md title=':::image-figure-polaroid.md'
 :::::image-div-polaroid
-:::image-figure-polaroid[This is a **figcaption** with _`<img>` attrs_.]
+:::image-figure-polaroid[这是一个带有 _`<img>` 属性_的**图片标题**。]
 ![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
 :::::
@@ -472,7 +470,7 @@ markdown-extension-syntax.png
 :::
 :::::
 
-<!-- change style -->
+<!-- 修改样式 -->
 :::::image-div-polaroid
 :::image-figure-polaroid{style="width:500px;"}
 ![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
@@ -481,7 +479,7 @@ markdown-extension-syntax.png
 ```
 
 :::::image-div-polaroid
-:::image-figure-polaroid[This is a **figcaption** with _`<img>` attrs_.]
+:::image-figure-polaroid[这是一个带有 _`<img>` 属性_的**图片标题**。]
 ![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
 :::::
@@ -505,29 +503,57 @@ markdown-extension-syntax.png
 ![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 :::
 :::::
+```
 
-## Video Embedding
+:::::image-div-polaroid
+:::image-figure-polaroid[这是一个带有 _`<img>` 属性_的**图片标题**。]
+![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
+:::
+:::::
 
-Use the [`::video`](https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#video-) directive from :link[remark-directive-sugar]{id=lin-stephanie/remark-directive-sugar .github} for consistent video embedding across different platforms. Customize via the `video` option in `plugins/index.ts` and style under `/* ::video */` in `src/styles/pro.css`.
+:::::image-div-polaroid
+:::image-figure-polaroid
+![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
 
-Say `example.md` contains:
+markdown-extension-syntax.png
+:::
+:::::
+
+:::::image-div-polaroid
+:::image-figure-polaroid
+![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
+:::
+:::::
+
+:::::image-div-polaroid
+:::image-figure-polaroid{style="width:500px;"}
+![OG image](~/assets/images/markdown-extension-syntax/markdown-extension-syntax.png)
+:::
+:::::
+```
+
+## 视频嵌入
+
+使用来自:link[remark-directive-sugar]{id=lin-stephanie/remark-directive-sugar .github}的[`::video`](https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#video-)指令，可以在不同平台上一致地嵌入视频。通过`plugins/index.ts`中的`video`选项进行自定义，并在`src/styles/pro.css`中的`/* ::video */`下设置样式。
+
+假设`example.md`包含：
 
 ```md title='example.md'
-<!-- Embed a YouTube video -->
+<!-- 嵌入YouTube视频 -->
 ::video-youtube{#gxBkghlglTg}
 
-<!-- Embed a Bilibili video with a custom `title` attr -->
+<!-- 嵌入Bilibili视频，带有自定义`title`属性 -->
 ::video-bilibili[custom title]{id=BV1MC4y1c7Kv}
 
-<!-- Embed a Vimeo video with class `no-scale` to disable scaling -->
+<!-- 嵌入Vimeo视频，带有`no-scale`类禁用缩放 -->
 ::video-vimeo{id=912831806 class='no-scale'}
 <!-- ::video-vimeo{id=912831806 .no-scale} -->
 
-<!-- Embed a custom video URL (must use `id`, not `#`) -->
+<!-- 嵌入自定义视频URL（必须使用`id`，而不是`#`） -->
 ::video{id=https://www.youtube-nocookie.com/embed/gxBkghlglTg}
 ```
 
-Then `example.mdx` renders as:
+然后`example.mdx`渲染为：
 
 ::video-youtube{#gxBkghlglTg}
 
@@ -537,77 +563,76 @@ Then `example.mdx` renders as:
 
 ::video{id=https://www.youtube-nocookie.com/embed/gxBkghlglTg}
 
-## Styled Link（`:link`）
+## 样式化链接（`:link`）
 
-Use the [`:link`](https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#link) directive from :link[remark-directive-sugar]{id=lin-stephanie/remark-directive-sugar .github} to add links with avatars or favicons for GitHub, npm, or custom URLs. Customize via the `link` option in `plugins/index.ts` and style under `/* :link */` in `src/styles/pro.css`.
+使用来自:link[remark-directive-sugar]{id=lin-stephanie/remark-directive-sugar .github}的[`:link`](https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#link)指令，为GitHub、npm或自定义URL添加带有头像或图标的链接。通过`plugins/index.ts`中的`link`选项进行自定义，并在`src/styles/pro.css`中的`/* :link */`下设置样式。
 
-**Link to a GitHub user or organization (prepend `id` with `@`)**
+**链接到GitHub用户或组织（在`id`前添加`@`）**
 
-**Example 1**: `:link[Dnzzk2]{#@Dnzzk2}` links to the GitHub profile of the project maintainer, :link[Dnzzk2]{#@Dnzzk2}.
+**示例1**：`:link[Dnzzk2]{#@Dnzzk2}`链接到项目维护者的GitHub个人资料，:link[Dnzzk2]{#@Dnzzk2}。
 
-**Example 2**: `:link[Vite]{id=@vitejs}` links to the GitHub profile of the :link[Vite]{id=@vitejs} organization.
+**示例2**：`:link[Vite]{id=@vitejs}`链接到:link[Vite]{id=@vitejs}组织的GitHub个人资料。
 
-**Example 3**: `:link{#@Dnzzk2 tab=repositories}` links directly to the repositories tab of the GitHub user, like :link{#@Dnzzk2 tab=repositories}. For GitHub users, valid `tab` options: `'repositories','projects', 'packages', 'stars', 'sponsoring', 'sponsors'`.
+**示例3**：`:link{#@Dnzzk2 tab=repositories}`直接链接到GitHub用户的repositories标签页，如:link{#@Dnzzk2 tab=repositories}。对于GitHub用户，有效的`tab`选项有：`'repositories','projects', 'packages', 'stars', 'sponsoring', 'sponsors'`。
 
-**Example 4**: `:link{#@vitejs tab=org-people}` links directly to the people section of a GitHub organization, like :link{#@vitejs tab=org-people}. For GitHub organizations, valid `tab` options: `'org-repositories', 'org-projects', 'org-packages', 'org-sponsoring', and 'org-people'`.
+**示例4**：`:link{#@vitejs tab=org-people}`直接链接到GitHub组织的people部分，如:link{#@vitejs tab=org-people}。对于GitHub组织，有效的`tab`选项有：`'org-repositories', 'org-projects', 'org-packages', 'org-sponsoring', and 'org-people'`。
 
-**Link to a GitHub repository**
+**链接到GitHub仓库**
 
-**Example 5**: `:link[Astro]{#withastro/astro}` or `:link[Astro]{id=withastro/astro}` creates a link to :link[Astro]{#withastro/astro} repo.
+**示例5**：`:link[Astro]{#withastro/astro}`或`:link[Astro]{id=withastro/astro}`创建一个链接到:link[Astro]{#withastro/astro}仓库的链接。
 
-**Link to an npm package**
+**链接到npm包**
 
-**Example 6**: `:link{#remark-directive-sugar}` links to the npm homepage of the :link{#remark-directive-sugar}.
+**示例6**：`:link{#remark-directive-sugar}`链接到npm上的:link{#remark-directive-sugar}主页。
 
-**Example 7**: `:link{id=remark-directive-sugar tab=dependencies}` links to the dependencies section of the :link{id=remark-directive-sugar tab=dependencies} on npm. For npm package, valid `tab` options: `'readme', 'code', 'dependencies', 'dependents', and 'versions'`.
+**示例7**：`:link{id=remark-directive-sugar tab=dependencies}`链接到npm上:link{id=remark-directive-sugar tab=dependencies}的依赖部分。对于npm包，有效的`tab`选项有：`'readme', 'code', 'dependencies', 'dependents', and 'versions'`。
 
-**Link to a custom URL (must use `id`, not `#`)**
+**链接到自定义URL（必须使用`id`，而不是`#`）**
 
-**Example 8**: `:link{id=https://developer.mozilla.org/en-US/docs/Web/JavaScript}` creates an external link to the :link{id=https://developer.mozilla.org/en-US/docs/Web/JavaScript}.
+**示例8**：`:link{id=https://developer.mozilla.org/en-US/docs/Web/JavaScript}`创建一个链接到:link{id=https://developer.mozilla.org/en-US/docs/Web/JavaScript}的外部链接。
 
-**Example 9**: `:link[Google]{id=https://www.google.com/}` creates an external link to the :link[Google]{id=https://www.google.com/}.
+**示例9**：`:link[Google]{id=https://www.google.com/}`创建一个链接到:link[Google]{id=https://www.google.com/}的外部链接。
 
-**Customization**
+**自定义**
 
-**Example 10**: `:link[Vite]{id=@vitejs url=https://vite.dev/}` creates a :link[Vite]{id=@vitejs url=https://vite.dev/} to `https://vite.dev/` instead of `https://github.com/vitejs` by using the `url`.
+**示例10**：`:link[Vite]{id=@vitejs url=https://vite.dev/}`通过使用`url`创建一个:link[Vite]{id=@vitejs url=https://vite.dev/}，链接到`https://vite.dev/`而不是`https://github.com/vitejs`。
 
-**Example 11**: `:link[Vite]{id=@vitejs img=https://vitejs.dev/logo.svg}` creates a :link[Vite]{id=@vitejs img=https://vitejs.dev/logo.svg} that displays a custom logo by using the `img`.
+**示例11**：`:link[Vite]{id=@vitejs img=https://vitejs.dev/logo.svg}`通过使用`img`创建一个:link[Vite]{id=@vitejs img=https://vitejs.dev/logo.svg}，显示自定义logo。
 
-**Example 12**: `:link{id=Dnzzk2/Litos class=github}` creates a :link{id=Dnzzk2/Litos class=github} with `class=github` (or `.github`) to override the default style of a GitHub repository.
+**示例12**：`:link{id=Dnzzk2/Litos class=github}`创建一个带有`class=github`（或`.github`）的:link{id=Dnzzk2/Litos class=github}，覆盖GitHub仓库的默认样式。
 
-**Example 13**: `:link[Litos Themes]{id=https://github.com/Dnzzk2/Litos img=https://github.githubassets.com/assets/mona-e50f14d05e4b.png}` fully customizes a link. :link[Litos Themes]{id=https://github.com/Dnzzk2/Litos img=
-https://litos.vercel.app/favicon.ico}
+**示例13**：`:link[Litos Themes]{id=https://github.com/Dnzzk2/Litos img=https://github.githubassets.com/assets/mona-e50f14d05e4b.png}`完全自定义链接。:link[Litos Themes]{id=https://github.com/Dnzzk2/Litos img=https://litos.vercel.app/favicon.ico}
 
-## Badges
+## 徽章
 
-Use the [`:badge`](https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#badge-) directive from :link[remark-directive-sugar]{id=lin-stephanie/remark-directive-sugar .github} to display small pieces of information, such as status or category.
+使用来自:link[remark-directive-sugar]{id=lin-stephanie/remark-directive-sugar .github}的[`:badge`](https://github.com/lin-stephanie/remark-directive-sugar?tab=readme-ov-file#badge-)指令来显示小块信息，如状态或类别。
 
-The theme provides the following one predefined badges. You can customize them via the `badge` option in `plugins/index.ts` and style them under `/* :badge */` in `src/styles/pro.css`.
+主题提供以下预定义徽章。您可以通过`plugins/index.ts`中的`badge`选项进行自定义，并在`src/styles/pro.css`中的`/* :badge */`下设置样式。
 
 - `badge-n`: :badge-n
 
-Additionally, you can direct use `:badge[text]{attrs}` for easy visual customization of badges. For example: `:badge[ISSUE]{style="background-color: #bef264"}` will display as :badge[ISSUE]{style="background-color: #bef264"}. If no color is specified, the default appearance will look like :badge[This].
+此外，您还可以直接使用`:badge[text]{attrs}`来轻松地对徽章进行视觉自定义。例如：`:badge[ISSUE]{style="background-color: #bef264"}`将显示为:badge[ISSUE]{style="background-color: #bef264"}。如果没有指定颜色，默认外观将如:badge[This]所示。
 
-## Details Dropdown
+## 详情下拉框
 
 ```md title=':::details.md'
 :::details
-::summary[Details Dropdown]
-- List item 1
-- List item 2
-- List item 3
-- List item 4
+::summary[详情下拉框]
+- 列表项1
+- 列表项2
+- 列表项3
+- 列表项4
 :::
 ```
 
 :::details
-::summary[Details Dropdown]
-- List item 1
-- List item 2
-- List item 3
-- List item 4
+::summary[详情下拉框]
+- 列表项1
+- 列表项2
+- 列表项3
+- 列表项4
 :::
 
-Additionally, it also supports usage similar to the [examples in remark-directive](https://github.com/remarkjs/remark-directive?tab=readme-ov-file#use).
+此外，它还支持类似于[remark-directive中的示例](https://github.com/remarkjs/remark-directive?tab=readme-ov-file#use)的用法。
 
-**Thank you** once again to the original author :link[Stephanie Lin]{#@lin-stephanie} for their development, which has enabled this theme to have such excellent extension functions 💗.
+**再次感谢**原作者:link[Stephanie Lin]{#@lin-stephanie}的开发，使得这个主题能够拥有如此出色的扩展功能💗。

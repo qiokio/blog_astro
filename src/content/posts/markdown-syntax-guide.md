@@ -1,104 +1,104 @@
 ---
-title: 'Markdown Writing Guide for Delicious Recipes'
-description: 'Learn Markdown basics through a delicious pasta recipe'
+title: 'Markdown美食食谱写作指南'
+description: '通过一道美味的意大利面食谱学习Markdown基础'
 pubDate: 2025-04-30
-tags: ['Markdown', 'Guide', 'Food']
+tags: ['Markdown', '指南', '美食']
 heroImage: 'Markdown-syntax-guide.webp'
 ogImage: 'Markdown-syntax-guide.webp'
 ---
 
-This guide will show you how to format text using Markdown through a delicious pasta recipe. Let's explore the world of food while learning Markdown syntax!
+本指南将通过一道美味的意大利面食谱向您展示如何使用Markdown格式化文本。让我们在学习Markdown语法的同时探索美食世界！
 
-## Basic Syntax Demonstration
+## 基础语法演示
 
-### Heading Levels
+### 标题层级
 
-In recipes, we often need different levels of headings to organize content. Markdown provides six heading levels:
-
-```markdown
-# Classic Garlic Bacon Pasta
-## Ingredients Preparation
-### Main Ingredients
-#### Seasonings
-##### Kitchen Tools
-###### Tips
-```
-
-### Text Formatting
-
-When describing recipes, we often need to emphasize certain important information:
-
-**Important steps** need to be bold
-*Critical timing* uses italics
-***Special notes*** use both bold and italics
-~~Optional steps~~ use strikethrough
+在食谱中，我们经常需要不同级别的标题来组织内容。Markdown提供六个标题级别：
 
 ```markdown
-**Important steps** need to be bold
-*Critical timing* uses italics
-***Special notes*** use both bold and italics
-~~Optional steps~~ use strikethrough
+# 经典蒜蓉培根意面
+## 食材准备
+### 主要食材
+#### 调味料
+##### 厨房工具
+###### 小贴士
 ```
 
-### Lists Usage
+### 文本格式化
 
-#### Ingredients List (Unordered List):
+在描述食谱时，我们经常需要强调某些重要信息：
 
-- Pasta 400g
-- Bacon 200g
-  - Preferably with a good mix of fat and lean
-  - Cut into small pieces
-- Minced garlic 3-4 cloves
-- Olive oil 2 tablespoons
+**重要步骤**需要加粗
+*关键时间*使用斜体
+***特别注意事项***同时使用粗体和斜体
+~~可选步骤~~使用删除线
 
 ```markdown
-- Pasta 400g
-- Bacon 200g
-  - Preferably with a good mix of fat and lean
-  - Cut into small pieces
-- Minced garlic 3-4 cloves
-- Olive oil 2 tablespoons
+**重要步骤**需要加粗
+*关键时间*使用斜体
+***特别注意事项***同时使用粗体和斜体
+~~可选步骤~~使用删除线
 ```
 
-#### Cooking Steps (Ordered List):
+### 列表用法
 
-1. Boil water with a pinch of salt
-2. Add pasta, cook until 80% done
-3. Meanwhile, prepare the sauce:
-   1. Heat oil in pan
-   2. Sauté minced garlic
-   3. Add bacon and stir-fry
+#### 食材列表（无序列表）：
+
+- 意面 400克
+- 培根 200克
+  - 最好是脂肪和瘦肉搭配得当的
+  - 切成小块
+- 蒜末 3-4瓣
+- 橄榄油 2汤匙
 
 ```markdown
-1. Boil water with a pinch of salt
-2. Add pasta, cook until 80% done
-3. Meanwhile, prepare the sauce:
-   1. Heat oil in pan
-   2. Sauté minced garlic
-   3. Add bacon and stir-fry
+- 意面 400克
+- 培根 200克
+  - 最好是脂肪和瘦肉搭配得当的
+  - 切成小块
+- 蒜末 3-4瓣
+- 橄榄油 2汤匙
 ```
 
-### Blockquotes
+#### 烹饪步骤（有序列表）：
 
-> Chef's tip: Add a bit of olive oil to the boiling water to prevent the pasta from sticking together.
+1. 将水烧开，加入少许盐
+2. 加入意面，煮至八成熟
+3. 同时，准备酱料：
+   1. 在锅中加热油
+   2. 炒香蒜末
+   3. 加入培根翻炒
+
+```markdown
+1. 将水烧开，加入少许盐
+2. 加入意面，煮至八成熟
+3. 同时，准备酱料：
+   1. 在锅中加热油
+   2. 炒香蒜末
+   3. 加入培根翻炒
+```
+
+### 引用块
+
+> 厨师提示：在沸水中加入少许橄榄油，可以防止意面粘在一起。
 >
-> Remember to save some pasta water, it can be used to adjust the sauce consistency.
+> 记得保留一些意面煮水，它可以用来调整酱汁的浓稠度。
 
 ```markdown
-> Chef's tip: Add a bit of olive oil to the boiling water to prevent the pasta from sticking together.
+> 厨师提示：在沸水中加入少许橄榄油，可以防止意面粘在一起。
 > 
-> Remember to save some pasta water, it can be used to adjust the sauce consistency.
+> 记得保留一些意面煮水，它可以用来调整酱汁的浓稠度。
 ```
 
-### Code Blocks
+### 代码块
 
-Can be used to show precise ingredient ratios or timing:
+可用于显示精确的配料比例或时间：
 
 ```python
-# Ingredient Calculator
+# 食材计算器
 def calculate_ingredients(servings):
-    base_pasta = 100  # grams/person
-    base_bacon = 50   # grams/person
+    base_pasta = 100  # 克/人
+    base_bacon = 50   # 克/人
     
     return {
         "pasta": base_pasta * servings,
@@ -106,58 +106,58 @@ def calculate_ingredients(servings):
     }
 ```
 
-### Tables
+### 表格
 
-Nutritional Information:
+营养信息：
 
-| Nutrient | Amount (per 100g) | % Daily Value |
+| 营养素 | 含量（每100克） | 日摄入参考值百分比 |
 |----------|------------------|---------------|
-| Calories | 157 kcal         | 7.85%         |
-| Protein  | 5.7g             | 9.5%          |
-| Carbs    | 21.6g            | 7.2%          |
+| 热量 | 157 千卡         | 7.85%         |
+| 蛋白质  | 5.7克             | 9.5%          |
+| 碳水化合物  | 21.6克            | 7.2%          |
 
-### Links and Images
+### 链接和图片
 
-For more culinary inspiration, visit: [Food Forum](https://example.com/cooking "Food Forum")
+获取更多烹饪灵感，请访问：[美食论坛](https://example.com/cooking "美食论坛")
 
-Final dish presentation:
-![Pasta dish](~/assets/images/md-configuration/food.webp)(style:width:50%)
+成品展示：
+![意面菜品](~/assets/images/md-configuration/food.webp)(style:width:50%)
 
-### Horizontal Rule
+### 水平分割线
 
-Used to separate different content sections:
+用于分隔不同内容部分：
 
 ---
 
-### Inline Code
+### 内联代码
 
-Pasta cooking time: `8-10 minutes`, maintain an `al dente` texture.
+意面烹饪时间：`8-10分钟`，保持`al dente`（有嚼劲的）质地。
 
-### Math Formulas
+### 数学公式
 
-Ingredient ratio calculation: $amount = base \ amount \times number \ of \ servings$
+食材比例计算：$用量 = 基础用量 \times 份数$
 
-Calorie calculation formula:
+卡路里计算公式：
 
 $$
-Total\ calories = \sum(ingredient\ weight \times calories\ per\ gram)
+总卡路里 = \sum(食材重量 \times 每克卡路里)
 $$
 
-### Task Lists
+### 任务列表
 
-Preparation checklist:
+准备清单：
 
-- [x] Purchase ingredients
-- [x] Wash and cut ingredients
-- [ ] Prepare cooking utensils
-- [ ] Preheat oven
+- [x] 购买食材
+- [x] 洗净并切好食材
+- [ ] 准备烹饪用具
+- [ ] 预热烤箱
 
-### Footnotes
+### 脚注
 
-This dish is inspired by traditional Italian recipes[^1].
+这道菜品灵感来源于传统意大利食谱[^1]。
 
-[^1]: From "100 Classic Italian Pasta Dishes", page 23.
+[^1]: 摘自《100道经典意大利面食谱》，第23页。
 
-Finally, I hope this food-themed Markdown guide helps you better understand and use Markdown syntax. Remember, just like cooking, practice makes perfect! Happy writing! 👨‍🍳👩‍🍳
+最后，希望这份以美食为主题的Markdown指南帮助您更好地理解和使用Markdown语法。记住，就像烹饪一样，熟能生巧！祝您写作愉快！👨‍🍳👩‍🍳
 
-You can find this file: `src/content/posts/markdown-syntax-guide.md` in the project and learn it based on the rendering results.
+您可以在项目中找到此文件：`src/content/posts/markdown-syntax-guide.md`，并根据渲染结果进行学习。

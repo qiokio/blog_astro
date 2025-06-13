@@ -1,81 +1,81 @@
 ---
-title: 'Getting Started'
+title: '入门指南'
 pubDate: 2025-05-05
-description: 'A comprehensive guide to getting started with the Litos Theme'
+description: 'Litos主题的全面入门指南'
 recommend: true
-tags: ['Tutorial']
+tags: ['教程']
 heroImage: 'Getting-Started.webp'
 ogImage: 'Getting-Started.webp'
 ---
 
-Welcome to **[Litos Theme](https://github.com/Dnzzk2/Litos)**! This comprehensive guide will walk you through setting up and launching your project with Litos, a modern blog theme built with Astro.js.
+欢迎使用 **[Litos Theme](https://github.com/Dnzzk2/Litos)**！这份全面的指南将带您完成使用Litos（一个基于Astro.js构建的现代博客主题）设置和启动项目的过程。
 
-## Prerequisites
+## 前提条件
 
-Before starting, ensure you have the following tools installed in your development environment:
+在开始之前，请确保您的开发环境中已安装以下工具：
 
-- :link[Node.js]{id=https://nodejs.org/en/download} - Required for running the development environment
-- :link[pnpm]{id=https://pnpm.io/installation} - Our preferred package manager for dependency management
-- :link[Git]{id=https://git-scm.com/} - For version control and project management
-- :link[VS Code]{id=https://code.visualstudio.com/} - Recommended code editor with excellent development experience
+- :link[Node.js]{id=https://nodejs.org/en/download} - 运行开发环境所必需的
+- :link[pnpm]{id=https://pnpm.io/installation} - 我们首选的依赖管理包管理器
+- :link[Git]{id=https://git-scm.com/} - 用于版本控制和项目管理
+- :link[VS Code]{id=https://code.visualstudio.com/} - 推荐的代码编辑器，提供出色的开发体验
 
 > [!tip]
-> While VS Code is recommended, you can use any code editor of your choice that supports web development.
+> 虽然推荐使用VS Code，但您可以使用任何支持Web开发的代码编辑器。
 
-## Project Setup
+## 项目设置
 
-### Creating Your Project
+### 创建您的项目
 
-You can start your Litos project by forking the repository:
+您可以通过fork仓库开始您的Litos项目：
 
-1. Visit the [Litos Theme repository](https://github.com/Dnzzk2/Litos)
-2. Click the "Fork" button to create your copy
-3. Clone your forked repository locally:
+1. 访问[Litos Theme仓库](https://github.com/Dnzzk2/Litos)
+2. 点击"Fork"按钮创建您的副本
+3. 在本地克隆您fork的仓库：
 
 ```bash
-git clone https://github.com/[YOUR_USERNAME]/[YOUR_REPO_NAME].git
-cd [YOUR_REPO_NAME]
+git clone https://github.com/[您的用户名]/[您的仓库名].git
+cd [您的仓库名]
 ```
 
-### Installing Dependencies
+### 安装依赖
 
-Once you have cloned the repository, install the project dependencies:
+克隆仓库后，安装项目依赖：
 
 ```bash
-# Install all required dependencies
+# 安装所有必需的依赖
 pnpm install
 
-# Start the development server
+# 启动开发服务器
 pnpm dev
 ```
 
-## Project Configuration
+## 项目配置
 
-Before customizing your site, familiarize yourself with the [project structure](/posts/project-structure). There are three main configuration areas to focus on:
+在定制您的网站之前，请先熟悉[项目结构](/posts/project-structure)。有三个主要的配置区域需要关注：
 
-1. **Basic Site Configuration**
-   - File: `src/config.ts`
-   - Purpose: Configure site metadata, navigation, and core settings
-   - Learn more: [Basic Configuration Guide](/posts/basic-configuration)
+1. **基本网站配置**
+   - 文件：`src/config.ts`
+   - 用途：配置网站元数据、导航和核心设置
+   - 了解更多：[基本配置指南](/posts/basic-configuration)
 
-2. **Code Block Styling**
-   - File: `ec.config.mjs`
-   - Purpose: Customize code block appearance and behavior
-   - Learn more: [ExpressiveCode Configuration](/posts/expressivecode-configuration)
+2. **代码块样式**
+   - 文件：`ec.config.mjs`
+   - 用途：自定义代码块的外观和行为
+   - 了解更多：[ExpressiveCode配置](/posts/expressivecode-configuration)
 
-3. **Markdown Extensions**
-   - File: `/plugins/index.ts`
-   - Purpose: Configure markdown plugins and extensions
-   - Learn more: [Markdown Extension Syntax](/posts/markdown-extension-syntax)
+3. **Markdown扩展**
+   - 文件：`/plugins/index.ts`
+   - 用途：配置Markdown插件和扩展
+   - 了解更多：[Markdown扩展语法](/posts/markdown-extension-syntax)
 
-## Content Creation
+## 内容创建
 
-Litos supports both standard Markdown and enhanced syntax features:
+Litos支持标准Markdown和增强语法功能：
 
-- [Basic Markdown Syntax](/posts/markdown-syntax-guide) - Core markdown formatting
-- [Extended Markdown Features](/posts/markdown-extension-syntax) - Advanced formatting options
+- [基本Markdown语法](/posts/markdown-syntax-guide) - 核心markdown格式化
+- [扩展Markdown功能](/posts/markdown-extension-syntax) - 高级格式化选项
 
-For post configuration and metadata, refer to the [Post Configuration](/posts/md-configuration) guide.
+关于文章配置和元数据，请参考[文章配置](/posts/md-configuration)指南。
 
 > [!tip]
-> Start by customizing the basic configuration to match your site's branding and navigation structure before creating content.
+> 在创建内容之前，先自定义基本配置以匹配您网站的品牌和导航结构。
