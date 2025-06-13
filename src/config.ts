@@ -41,6 +41,10 @@ export const FOOTER_LINKS: Link[] = [
     name: '网站地图',
     url: '/sitemap',
   },
+  {
+    name: '版本说明',
+    url: '/colophon',
+  },
 ]
 
 // 获取图标 https://icon-sets.iconify.design/

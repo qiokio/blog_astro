@@ -1,0 +1,180 @@
+---
+import { SITE } from '~/config.ts'
+import Layout from '~/layouts/Layout.astro'
+import SectionDivider from '~/components/base/SectionDivider.astro'
+---
+
+<Layout title="版本说明" description="关于本网站的设计与技术信息">
+  <div class="relative z-[1]">
+    <div class="py-8 pb-10 px-6 sm:px-8">
+      <h1 class="flex flex-col gap-2">
+        <span class="text-4xl sm:text-5xl tracking-tight"> 版本说明 </span>
+        <span class="text-muted-foreground font-light text-xl sm:text-2xl block tracking-wide text-balance">
+          关于本网站的设计与技术信息
+        </span>
+      </h1>
+      <div class="pro text-muted-foreground text-balance">
+        <p>
+          这个页面详细介绍了本网站的设计理念、使用的技术栈和制作过程。
+        </p>
+      </div>
+    </div>
+
+    <SectionDivider />
+    
+    <div class="py-8 pb-10 px-6 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl">技术栈</h2>
+      <p class="text-muted-foreground mb-6 mt-1">本网站使用的核心技术。</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="sitemap-card group">
+          <div class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content">
+              <h3 class="text-xl font-medium mb-2">Astro</h3>
+              <p class="text-muted-foreground">现代静态网站生成器，提供出色的性能和开发体验。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </div>
+        </div>
+        
+        <div class="sitemap-card group">
+          <div class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content">
+              <h3 class="text-xl font-medium mb-2">Tailwind CSS</h3>
+              <p class="text-muted-foreground">实用优先的CSS框架，用于快速构建现代网站。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </div>
+        </div>
+        
+        <div class="sitemap-card group">
+          <div class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content">
+              <h3 class="text-xl font-medium mb-2">TypeScript</h3>
+              <p class="text-muted-foreground">JavaScript的超集，增加了类型系统和其他特性。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </div>
+        </div>
+        
+        <div class="sitemap-card group">
+          <div class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content">
+              <h3 class="text-xl font-medium mb-2">Markdown/MDX</h3>
+              <p class="text-muted-foreground">用于内容创作的轻量级标记语言。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <SectionDivider />
+    
+    <div class="py-8 pb-10 px-6 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl">设计理念</h2>
+      <p class="text-muted-foreground mb-6 mt-1">指导本网站设计的核心原则。</p>
+      
+      <div class="space-y-6">
+        <div class="sitemap-card group">
+          <div class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content">
+              <h3 class="text-xl font-medium mb-2">简约现代</h3>
+              <p class="text-muted-foreground">注重内容的清晰呈现，减少视觉干扰，采用现代化的设计语言。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </div>
+        </div>
+        
+        <div class="sitemap-card group">
+          <div class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content">
+              <h3 class="text-xl font-medium mb-2">响应式布局</h3>
+              <p class="text-muted-foreground">适应各种设备屏幕尺寸，提供一致的用户体验。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </div>
+        </div>
+        
+        <div class="sitemap-card group">
+          <div class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content">
+              <h3 class="text-xl font-medium mb-2">深色模式支持</h3>
+              <p class="text-muted-foreground">提供深色模式选项，减少眼睛疲劳，提升夜间阅读体验。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <SectionDivider />
+    
+    <div class="py-8 pb-10 px-6 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl">字体与排版</h2>
+      <p class="text-muted-foreground mb-6 mt-1">网站使用的字体和排版设计。</p>
+      
+      <div class="space-y-4">
+        <div class="sitemap-card group">
+          <div class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content">
+              <h3 class="text-xl font-medium mb-2">系统字体栈</h3>
+              <p class="text-muted-foreground">使用系统默认字体，确保最佳性能和熟悉的阅读体验。</p>
+              <p class="font-mono text-sm mt-2 p-2 bg-muted rounded-md">font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <SectionDivider />
+    
+    <div class="py-8 pb-10 px-6 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl">致谢</h2>
+      <p class="text-muted-foreground mb-6 mt-1">感谢以下项目和资源的支持。</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="sitemap-card group">
+          <a href="https://astro.build" target="_blank" rel="noopener noreferrer" class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content transform transition-transform duration-300 group-hover:translate-x-2">
+              <h3 class="text-xl font-medium mb-2 group-hover:text-accent-foreground transition-colors">Astro</h3>
+              <p class="text-muted-foreground">网站构建框架。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </a>
+        </div>
+        
+        <div class="sitemap-card group">
+          <a href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer" class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content transform transition-transform duration-300 group-hover:translate-x-2">
+              <h3 class="text-xl font-medium mb-2 group-hover:text-accent-foreground transition-colors">Tailwind CSS</h3>
+              <p class="text-muted-foreground">样式框架。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </a>
+        </div>
+        
+        <div class="sitemap-card group">
+          <a href="https://icon-sets.iconify.design" target="_blank" rel="noopener noreferrer" class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content transform transition-transform duration-300 group-hover:translate-x-2">
+              <h3 class="text-xl font-medium mb-2 group-hover:text-accent-foreground transition-colors">Iconify</h3>
+              <p class="text-muted-foreground">图标资源。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .sitemap-card {
+    transition: all 0.3s ease;
+  }
+  
+  .sitemap-card:hover {
+    background-color: hsl(var(--accent)/30%);
+  }
+</style> 
