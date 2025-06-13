@@ -38,10 +38,11 @@ import Layout from '~/layouts/Layout.astro'
 
 <style>
   .animate-typing {
-    animation: typing 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+    animation: typing 1s cubic-bezier(0.4, 0, 0.2, 1) forwards;
     overflow: hidden;
     white-space: nowrap;
     display: inline-block;
+    max-width: 100%;
   }
 
   @keyframes typing {
@@ -49,7 +50,7 @@ import Layout from '~/layouts/Layout.astro'
       width: 0ch;
     }
     to {
-      width: var(--typing-width, 20ch);
+      width: var(--typing-width, 100%);
     }
   }
 
@@ -74,8 +75,14 @@ import Layout from '~/layouts/Layout.astro'
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.animate-typing').forEach((el) => {
-      const text = el.textContent || ''
-      ;(el as HTMLElement).style.setProperty('--typing-width', `${text.length}ch`)
-    })
-  })
+      const text = el.textContent || '';
+      const textLength = text.length;
+      // 为中文字符提供更多宽度空间，乘以1.5作为安全系数
+      (el as HTMLElement).style.setProperty('--typing-width', `${textLength * 1.5}ch`);
+      
+      // 根据文本长度调整动画持续时间，确保长文本有足够时间显示
+      const animationDuration = Math.max(1, textLength * 0.05); // 至少1秒，每个字符0.05秒
+      (el as HTMLElement).style.animationDuration = `${animationDuration}s`;
+    });
+  });
 </script>

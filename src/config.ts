@@ -37,18 +37,22 @@ export const FOOTER_LINKS: Link[] = [
     name: '标签',
     url: '/tags',
   },
+  {
+    name: '网站地图',
+    url: '/sitemap',
+  },
 ]
 
 // 获取图标 https://icon-sets.iconify.design/
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: 'github',
-    url: 'https://github.com/yourname',
+    url: 'https://github.com/qiokio',
     icon: 'icon-[ri--github-fill]',
   },
   {
     name: 'twitter',
-    url: 'https://x.com/yourname',
+    url: 'https://x.com/qiokio',
     icon: 'icon-[ri--twitter-x-fill]',
   },
   {

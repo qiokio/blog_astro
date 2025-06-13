@@ -114,18 +114,18 @@ Litos包含内置的社交媒体集成功能，允许您展示您的社交媒体
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     name: 'github',    // 平台标识符
-    url: 'https://github.com/yourname',    // 您的个人资料URL
+    url: 'https://github.com/qiokio',    // 您的个人资料URL
     icon: 'icon-[ri--github-fill]',    // Iconify图标类
-    count: 9    // 可选：关注者数量
+    count: 2    // 可选：关注者数量
   },
   {
     name: 'twitter',
-    url: 'https://x.com/yourname',
+    url: 'https://x.com/',
     icon: 'icon-[ri--twitter-x-fill]',
   },
   {
     name: 'bilibili',
-    url: 'https://space.bilibili.com/yourSpaceId',
+    url: 'https://space.bilibili.com/',
     icon: 'icon-[ri--bilibili-fill]',
   },
 ]

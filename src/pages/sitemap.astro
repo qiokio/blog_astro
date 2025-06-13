@@ -1,0 +1,129 @@
+---
+import { SITE, HEADER_LINKS, FOOTER_LINKS, PROJECTS_CONFIG } from '~/config.ts'
+import { getCollection } from 'astro:content'
+import Layout from '~/layouts/Layout.astro'
+import SectionDivider from '~/components/base/SectionDivider.astro'
+
+// 获取所有文章和标签
+const allPosts = await getCollection('posts')
+const allTags = [...new Set(allPosts.map((post) => post.data.tags).flat())]
+---
+
+<Layout title="网站地图" description="网站的所有页面导航">
+  <div class="relative z-[1]">
+    <div class="py-8 pb-10 px-6 sm:px-8">
+      <h1 class="flex flex-col gap-2">
+        <span class="text-4xl sm:text-5xl tracking-tight"> 网站地图 </span>
+        <span class="text-muted-foreground font-light text-xl sm:text-2xl block tracking-wide text-balance">
+          所有页面的导航指南
+        </span>
+      </h1>
+      <div class="pro text-muted-foreground text-balance">
+        <p>
+          这个页面提供了网站所有主要页面的链接，帮助您快速找到所需内容。
+        </p>
+      </div>
+    </div>
+
+    <SectionDivider />
+    
+    <div class="py-8 pb-10 px-6 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl">主要页面</h2>
+      <p class="text-muted-foreground mb-6 mt-1">网站的核心页面。</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="sitemap-card group">
+          <a href="/" class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content transform transition-transform duration-300 group-hover:translate-x-2">
+              <h3 class="text-xl font-medium mb-2 group-hover:text-accent-foreground transition-colors">首页</h3>
+              <p class="text-muted-foreground">网站的主页，包含最新内容和概览。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </a>
+        </div>
+        
+        {HEADER_LINKS.map((link) => (
+          <div class="sitemap-card group">
+            <a href={link.url} class="block p-4 border border-border rounded-lg relative">
+              <div class="card-content transform transition-transform duration-300 group-hover:translate-x-2">
+                <h3 class="text-xl font-medium mb-2 group-hover:text-accent-foreground transition-colors">{link.name}</h3>
+                <p class="text-muted-foreground">
+                  {link.name === '文章' ? '所有博客文章的集合。' : 
+                   link.name === '项目' ? '展示的项目作品。' : 
+                   '网站内容。'}
+                </p>
+              </div>
+              <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+            </a>
+          </div>
+        ))}
+        
+        <div class="sitemap-card group">
+          <a href="/tags" class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content transform transition-transform duration-300 group-hover:translate-x-2">
+              <h3 class="text-xl font-medium mb-2 group-hover:text-accent-foreground transition-colors">标签</h3>
+              <p class="text-muted-foreground">按主题浏览文章。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <SectionDivider />
+    
+    <div class="py-8 pb-10 px-6 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl">所有标签</h2>
+      <p class="text-muted-foreground mb-6 mt-1">按主题浏览内容。</p>
+      
+      <div class="flex flex-wrap gap-2">
+        {allTags.map((tag) => (
+          <a 
+            href={`/tags/${tag}`} 
+            class="px-3 py-1 bg-accent/50 hover:bg-accent text-foreground rounded-full text-sm transition-colors">
+            {tag}
+          </a>
+        ))}
+      </div>
+    </div>
+
+    <SectionDivider />
+    
+    <div class="py-8 pb-10 px-6 sm:px-8">
+      <h2 class="text-2xl sm:text-3xl">功能页面</h2>
+      <p class="text-muted-foreground mb-6 mt-1">其他有用的页面。</p>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="sitemap-card group">
+          <a href="/rss.xml" class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content transform transition-transform duration-300 group-hover:translate-x-2">
+              <h3 class="text-xl font-medium mb-2 group-hover:text-accent-foreground transition-colors">RSS 订阅</h3>
+              <p class="text-muted-foreground">订阅网站内容的 RSS Feed。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </a>
+        </div>
+        
+        <div class="sitemap-card group">
+          <a href="/sitemap" class="block p-4 border border-border rounded-lg relative">
+            <div class="card-content transform transition-transform duration-300 group-hover:translate-x-2">
+              <h3 class="text-xl font-medium mb-2 group-hover:text-accent-foreground transition-colors">网站地图</h3>
+              <p class="text-muted-foreground">当前页面，网站的内容导航。</p>
+            </div>
+            <div class="absolute left-0 top-0 h-full w-0.5 scale-y-0 bg-accent/80 transition-transform duration-300 group-hover:scale-y-100"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</Layout>
+
+<style>
+  .sitemap-card {
+    transition: all 0.3s ease;
+  }
+  
+  .sitemap-card:hover {
+    background-color: hsl(var(--accent)/30%);
+  }
+</style> 
